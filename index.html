@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Studio - Emergency Fix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="simple-container">
+        <h1>🎭 AI Multi-Agent Studio</h1>
+        
+        <p>1. Введіть API Key:</p>
+        <input type="password" id="apiKey" class="main-input">
+        
+        <p>2. Опишіть ідею:</p>
+        <textarea id="userPrompt" class="main-input"></textarea>
+        
+        <button id="startBtn">ЗАПУСТИТИ РОЗРОБКУ</button>
+
+        <div class="display-grid">
+            <div class="res-box">
+                <b>✍️ Сценарист:</b>
+                <div id="status1" class="small-status">Очікування...</div>
+                <div id="content1"></div>
+            </div>
+            <div class="res-box">
+                <b>🧐 Критик:</b>
+                <div id="status2" class="small-status">Очікування...</div>
+                <div id="content2"></div>
+            </div>
+        </div>
+        
+        <button id="resetBtn" style="background:#666; margin-top:20px;">Очистити все</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
