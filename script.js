@@ -1,4 +1,4 @@
-// Використовуємо 1.5-flash, бо у неї найбільша безкоштовна квота
+// Використовуємо 1.6-preview
 const MODEL_NAME = "gemini-robotics-er-1.6-preview"; 
 
 async function callGemini(key, text) {
@@ -15,7 +15,7 @@ async function callGemini(key, text) {
     const data = await response.json();
 
     if (!response.ok) {
-        // Обробка помилки квоти (забагато запитів)
+        // Обробка помилки (забагато запитів)
         if (response.status === 429) {
             throw new Error("Забагато запитів! Будь ласка, зачекайте 30-60 секунд.");
         }
